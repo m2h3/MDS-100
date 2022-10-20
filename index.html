@@ -2,31 +2,36 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>MDS-100の3Dプレビュー</title>
-  <script type="module"　src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>  
+    <title>MDS-100の3D VIEW</title>
   </head>
   <body>
+  <script 
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
 
-  <model-viewer  
+    document.querySelector('model-viewer').addEventListener('load', (event) => {
+      event.target.activateAR();
+    });
+    
+  </script>
+
+    <model-viewer  
+    ar
+    alt="VIERWER_MDS-100" 
     src="VIERWER_MDS-100.glb" 
     ios-src="VIERWER_MDS-100.usdz#callToAction=ページを閉じる&checkoutTitle=MDS-100&checkoutSubtitle=マイク形拡声器&price=OPEN"" 
-    ar                                                                                                              
-    style="width:800px;height:1000px;"                                                                                                                                                                                                                                
+
+    style="width:800px;height:1000px;"                  
+
     background-color="#70BCD1"
-    shadow-intensity="1"
+    shadow-intensity="0.7"
     camera-controls
-    quick-look-browsers = "safari chrome"                      
     interaction-prompt="auto"
     auto-rotate ar magic-leap
-  >
-  
-  </model-viewer>
-                             
+    quick-look-browsers = "safari chrome"           
+                             >
+
+
+    </model-viewer>
   </body>
- <script>
-   document.querySelector('model-viewer').addEventListener('load', (event) => {
-   event.target.activateAR();
-    });
- </script>                             
 </html>
- 
