@@ -8,6 +8,11 @@
   <script 
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+   
+    document.querySelector('model-viewer').addEventListener('load', (event) => {
+      event.target.activateAR();
+    });>
+    
  
   </script>
  
@@ -15,7 +20,7 @@
     ar
     alt="VIERWER_MDS-100"
     src="VIERWER_MDS-100.glb" 
-    ios-src="VIERWER_MDS-100.usdz" 
+    ios-src="VIERWER_MDS-100.usdz#callToAction=カートに入れる&checkoutTitle=MDS-100&checkoutSubtitle=マイク形拡声器&price=OPEN"" 
  
     style="width:1920px;height:1080px;"                  
  
@@ -23,7 +28,9 @@
     shadow-intensity="0.7"
     camera-controls
     interaction-prompt="auto"
-    auto-rotate ar magic-leap>
+    auto-rotate ar magic-leap
+                  
+                  >
  
  
     </model-viewer>
