@@ -9,9 +9,8 @@
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
    
-    document.querySelector('#another-ar-button').addEventListener('click', (event) => {
-      const modelViewer = document.querySelector("model-viewer");
-      modelViewer.activateAR();
+  document.querySelector('model-viewer').addEventListener('load', (event) => {
+      event.target.activateAR();
     });
     
   </script>
