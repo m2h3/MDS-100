@@ -27,5 +27,13 @@
 
 
     </model-viewer>
+                             
+   <script>
+    document.querySelector('#another-ar-button').addEventListener('click', (event) => {
+      const modelViewer = document.querySelector("model-viewer");
+      modelViewer.activateAR();
+    });
+  </script>                                                             
+                             
   </body>
 </html>
