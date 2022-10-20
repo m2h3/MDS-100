@@ -9,8 +9,9 @@
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
    
-    document.querySelector('model-viewer').addEventListener('load', (event) => {
-      event.target.activateAR();
+    　 document.querySelector('#another-ar-button').addEventListener('click', (event) => {
+      const modelViewer = document.querySelector("model-viewer");
+      modelViewer.activateAR();
     });
 
   </script>
@@ -26,12 +27,12 @@
     background-color="#70BCD1"
     shadow-intensity="0.7"
     camera-controls
+    quick-look-browsers = "safari chrome"                      
     interaction-prompt="auto"
     auto-rotate ar magic-leap
-    >
- 
- 
-    </model-viewer>
+  >
+  </model-viewer>
+  <button id="another-ar-button">Start AR</button>                           
   </body>
 </html>
  
