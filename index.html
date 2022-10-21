@@ -10,13 +10,15 @@
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
 
   </script>
-    
-    <script>
-    document.querySelector('model-viewer').addEventListener('load', (event) => {
-      event.target.activateAR();
-    });
-  </script>
 
+        
+<script>
+var modelViewer = document.getElementById('model-viewer');
+modelViewer.addEventListener('load', function () { 
+    modelViewer.activateAR(); 
+});
+</script>
+    
     <model-viewer  
     ar
     alt="VIERWER_MDS-100" 
