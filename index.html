@@ -10,25 +10,16 @@
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
 
   </script>
-
-        
-<script>
-var modelViewer = document.getElementById('model-viewer');
-modelViewer.addEventListener('load', function () { 
-    modelViewer.activateAR(); 
-});
-</script>
     
     <model-viewer  
     ar
     alt="VIERWER_MDS-100" 
     src="VIERWER_MDS-100.glb" 
     ios-src="VIERWER_MDS-100.usdz" 
-
-    style="width:1000px;height:1000px;"   
                                           
     background-color="#70BCD1"
     shadow-intensity="1"
+    shadow-softness ="0"
     camera-controls
     interaction-prompt="auto"
     auto-rotate ar magic-leap >
